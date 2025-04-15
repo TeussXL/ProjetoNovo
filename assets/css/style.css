@@ -1,0 +1,233 @@
+/*=============== copyright 2025 Mari & Denny ===============*/
+
+/*-----------------------------------*\
+  #VARIÁVEIS
+\*-----------------------------------*/
+
+:root {
+  /*==== cores terrosas e quentes ====*/
+  --marrom-escuro: #4e342e;
+  --marrom-medio: #6d4c41;
+  --bege-claro: #f5eee6;
+  --bege-queimado: #d7ccc8;
+  --dourado-suave: #c49b63;
+  --text-white: hsla(0, 0%, 100%, 1);
+  --text-gainsboro: hsla(0, 0%, 87%, 1);
+
+  /*==== gradiente ====*/
+  --gradiente-doce: linear-gradient(
+    to right,
+    #6d4c41,
+    #c49b63,
+    #f5eee6
+  );
+
+  /*==== tipografia ====*/
+  --ff-padrao: 'Poppins', sans-serif;
+  --ff-titulo: 'Cinzel', serif;
+
+  /*==== tamanhos ====*/
+  --fs-1: 3.6rem;
+  --fs-2: 2.4rem;
+  --fs-3: 2rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.5rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+
+  /*==== espaçamento ====*/
+  --espaco-secao: 60px;
+
+  /*==== bordas ====*/
+  --borda-arredondada: 8px;
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /*==== transições ====*/
+  --transicao-padrao: 250ms ease;
+
+  /*==== negrito ====*/
+  --weight-regular: 400;
+  --weight-semiBold: 600;
+  --weight-bold: 700;
+
+  /*==== border radius ====*/
+  --radius-circle: 50%;
+  --radius-5: 5px;
+  --radius-3: 3px;
+
+  /*==== sombra ====*/
+  --shadow: 0 0 20px rgba(0, 0, 0, 0.7); /*horizontal/vertical/desfoque/espelhamento*/
+
+  /*==== transição ====*/
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+  /*==== clip path ====*/
+  --clip-path-1: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-path-2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --clip-path-3: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-4: polygon(90% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+  --clip-path-5: polygon(100% 0, 100% 100%, 10% 100%, 0 60%, 0 0);
+  --clip-path-6: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+  --clip-path-7: polygon(100% 0, 100% 60%, 90% 100%, 0 100%, 0 0);
+  --clip-path-8: polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-9: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+textarea,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit; /*herda da div pai*/
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bege-claro);
+  color: var(--marrom-escuro);
+  font-family: var(--ff-padrao);
+  font-size: var(--fs-normal);
+  line-height: 1.6;
+  overflow-x: hidden;
+  height: 10000px; /*apenas para mostrar a barra de rolagem*/
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--marrom-medio);
+  border-radius: var(--radius-5);
+}
+
+/*-----------------------------------*\
+  ESTILOS REUTILIZÁVEIS
+\*-----------------------------------*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
+}
+
+.btn {
+  position: relative;
+  background: var(--gradiente-doce);
+  background-color: var(--dourado-suave);
+  color: var(--text-white);
+  font-size: var(--fs-8);
+  font-weight: var(--weight-semiBold);
+  min-width: 120px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  padding-inline: 30px;
+  border-radius: var(--radius-5);
+  clip-path: var(--clip-path-3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+.nav-toggle-btn, .dropdown-menu {
+  display: none;
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.logo img{
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bege-claro);
+  padding: 10px 12px;
+  z-index: 4;
+  box-shadow: var(--shadow);
+}
+
+.header.active {
+  position: fixed;
+  animation: slideUP 1s ease forwards;
+}
+
+@keyframes slideUP {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
