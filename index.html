@@ -37,52 +37,51 @@
           <li class="navbar-item">
             <a href="#" class="navbar-link">sobre</a>
           </li>
-          <li>
 
-            <a href="#" class="dropdown-link">
+          
+          <!--dropdown-->
+          <li class="dropdown-item">
+            <div class="navbar-link dropdown-toggle" data-dropdown-toggle>
+              Serviços <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-link">Cafés</a></li>
+              <li><a href="#" class="dropdown-link">Salgados</a></li>
+              <li><a href="#" class="dropdown-link">Pães e Sanduíches</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">
               Contato
             </a>
         </li>
-          <!--dropdown-->
-          <li class="dropdown-item">
-            <div class="navbar-link">
-              Serviços <ion-icon name="chevron-down-outline"></ion-icon>
-            </div>
-          </li>
-
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#" class="dropdown-link">
-                Cafés
-              </a>
-            </li>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#" class="dropdown-link">
-                  Salgados
-                </a>
-              </li>
-
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#" class="dropdown-link">
-                    Pães e Sanduíches
-                  </a>
-                </li>
-        </ul>
+        </ul>   
       </nav>
 
         <a href="#" class="btn">Login</a>
 
+        <button class="search-btn" id="searchToggle" aria-label="buscar">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
         <button class="nav-toggle-btn" aria-label="menu mobile">
           <ion-icon name="menu-outline"></ion-icon>
         </button>
-
-
-
     </div>
   </header>
+
+  <!--BANNER-->
+  <section class="banner">
+    <video autoplay muted loop>
+      <source src="assets/videos/bannerCafeteria.mp4">
+    </video>
+  </section>
+
+
+
+
+
 
   <!--script-->
   <script src="assets/js/script.js"></script>
