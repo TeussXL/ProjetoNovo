@@ -675,7 +675,25 @@ transition: background-color 0.3s, color 0.1s;
   align-items: center;
   min-height: 100vh;
   margin: 0 auto;  
-  background: var(--bege-claro);
+  background: linear-gradient(
+    to top,
+    var(--bege-claro),
+    var(--bege-queimado),
+    var(--dourado-suave)
+  );
+
+  /*Abrir em tela cheia o login*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 1000;
+}
+.container-login.active {
+  display: flex;
+  
 }
 
 .wrapper {
@@ -702,6 +720,8 @@ transition: background-color 0.3s, color 0.1s;
   font-size: var(--fs-2);
   color: var(--marrom-escuro);
   text-align: center;
+  font-family: var(--ff-titulo);
+
 }
 
 .form-box .input-box {
@@ -757,3 +777,66 @@ transition: background-color 0.3s, color 0.1s;
   margin: 20px auto;
   padding: 10px 20px;
 }
+
+/* # SOBRE */
+.container-sobre {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about .container-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.section {
+  padding-block: var(--espaco-secao);
+}
+
+.about-banner {
+  margin-block-end: 50px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-banner img {
+  filter: contrast(1.2) brightness(0.9);
+  transition: all 0.4s ease;
+  border-radius: var(--radius-5);
+  box-shadow: var(--shadow);
+}
+
+.about-banner img:hover {
+  filter: contrast(1.4) brightness(1);
+  transform: translateY(8px);
+}
+
+.about .section-text-1 {
+  margin-block: 25px 15px;
+  text-align: justify;
+}
+
+.about-content .section-subtitle {
+  color: var(--marrom-escuro);
+  font-weight: var(--weight-semiBold);
+  text-align: center;
+  font-size: var(--fs-6);
+}
+
+.about-content .btn {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  max-width: 180px;
+}
+/*
+.efeito {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+/*
