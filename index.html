@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cafeteria & Doceria - Um lugar para delícias e café."
+    />
+    <meta name="title" content="Cafeteria & Doceria" />
+
+    <title>Cafeteria & Doceria</title>
+
+    <!--favicon>-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--header-->
+    <header class="header active">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="assets/img/Logo2.0.png" alt="logo Cafeteria & Doceria" />
+        </a>
+
+        <!--nav menu-->
+        <nav class="navbar active">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#NossosTrabalhos" class="navbar-link"
+                >Nossos Trabalhos</a
+              >
+            </li>
+
+            <!--dropdown-->
+            <li class="dropdown-item">
+              <div class="navbar-link dropdown-toggle" data-dropdown-toggle>
+                Serviços <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-link">Cafés</a></li>
+                <li><a href="#" class="dropdown-link">Salgados</a></li>
+                <li><a href="#" class="dropdown-link">Pães e Sanduíches</a></li>
+                <li><a href="#" class="dropdown-link">Doces</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link"> Contato </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn" id="openLogin">Login</a>
+
+        <button class="search-btn" id="searchToggle" aria-label="buscar">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <!-- Overlay da busca -->
+        <div class="search-overlay" id="searchOverlay">
+          <button class="close-btn" id="closeSearch" aria-label="Fechar busca">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="O que você está procurando?"
+              class="search-input"
+              autofocus
+            />
+          </div>
+        </div>
+
+        <button class="nav-toggle-btn" aria-label="menu mobile">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </header>
+
+    <!--BANNER-->
+    <section class="banner">
+      <video autoplay muted loop>
+        <source src="assets/videos/bannerCafeteria.mp4" />
+      </video>
+    </section>
+
+    <!--Sobre-->
+    <section class="section about" aria-label="sobre" id="Sobre">
+      <div class="container-sobre">
+        <figure class="about-banner"> 
+          <img src="assets/img/preview.png" alt="sobre" class="w-100 efeito" />
+        </figure>
+        <div class="about-content">
+          <p class="section-subtitle">Sobre Nossa Cafeteria</p></p>
+          <h2 class="h2 text-center">Bem-vindo a Cafeteria & Doceria</h2">
+            <p class="section-text-1">
+              Nossa cafeteria e doceria oferece uma variedade de produtos
+              deliciosos e saborosos, como cafés, salgados, pães e sanduíches,
+              doces e bebidas, tudo feito com ingredientes frescos e de alta
+              qualidade.
+            </p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!--galeria de imagens-->
+    <section class="section-gallery" id="NossosTrabalhos">
+      <div class="container-galeria">
+        <p class="section-subtitle text-center">Nossos Trabalho</p>
+        <h2 class="h2 text-center">Confira nossas delícias</h2>
+      </div>
+
+      <div class="galeria">
+        <img src="assets/img/cafeComBolo.jpg" alt="Café com Bolo" />
+        <img src="assets/img/donutsRosa.jpg" alt="Donuts Rosa" />
+        <img src="assets/img/xicaraComLivro.jpg" alt="Xícara com Livro" />
+        <img src="assets/img/donutsEsmaltados.jpg" alt="Donuts Esmaltados" />
+      </div>
+
+      <div class="botao-ver-mais">
+        <a href="#" class="btn-ver-mais" title="Ver nossos serviços">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+      </div>
+
+      <!--LIGHTBOX-->
+      <div class="lightbox" id="lightbox">
+        <button class="close-lightbox" aria-label="Fechar lightbox">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <img src="" alt="imagem ampliada" id="lightbox-img" />
+      </div>
+    </section>
+
+    <!--SERVIÇOS-->
+    <section class="section services" aria-label="service">
+      <div class="container-serv">
+        <p class="section-subtitle text-center">Nossos Serviços</p>
+        <h2 class="h2 section-title text-center">Confira nossos serviços</h2>
+
+        <!--card 1-->
+        <ul class="service-list">
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="assets/img/cafeteria_icon.png"
+                  alt=""
+                  class="w-100"
+                  width="100"
+                  height="50"
+                />
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Cafés</h3>
+                <p class="card-text">
+                  Desfrute de uma variedade de cafés, desde os clássicos até os
+                  mais exóticos.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <!--card 2-->
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="assets/img/hamburger_icon.png"
+                  alt="hamburger_icon"
+                  class="w-100"
+                  width="100"
+                  height="50"
+                />
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Salgados</h3>
+                <p class="card-text">
+                  Desfrute de uma variedade de salgados, desde os clássicos até
+                  os mais exóticos.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <!--card 3-->
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="assets/img/paoooo.png"
+                  alt="pao_icon"
+                  class="w-100"
+                  width="100"
+                  height="50"
+                />
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Pães e Sanduíches</h3>
+                <p class="card-text">
+                  Desfrute de uma variedade de pães e sanduíches, desde os
+                  clássicos até os mais exóticos.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <!--img centro-->
+          <li class="service-banner">
+            <figure>
+              <img
+                src="assets/img/img_centro.png"
+                alt=""
+                class="w-100"
+                width="100"
+                height="50"
+              />
+            </figure>
+          </li>
+
+          <!--card 4-->
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="assets/img/doceee.png"
+                  alt="doces_icon"
+                  class="w-100"
+                  width="100"
+                  height="50"
+                />
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Doces</h3>
+                <p class="card-text">
+                  Explore uma variedade de doces irresistíveis, perfeitos para
+                  qualquer ocasião.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--LOGIN-->
+    <section class="container-login">
+      <div class="wrapper">
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+
+        <div class="form-box login">
+          <h2 class="animation" style="--i: 0">Login</h2>
+
+          <form action="#">
+            <div class="input-box animation" style="--i: 1">
+              <input type="text" required />
+              <label>Usuário</label> 
+              <ion-icon name="person"></ion-icon> 
+            </div>
+
+            <div class="input-box animation" style="--i: 2">
+              <input type="password" required />
+              <label>Senha</label> 
+              <ion-icon name="lock-closed"></ion-icon>
+            </div>
+
+            <button type="submit" class="btn btn-login animation" style="--i: 3">Entrar</button>
+
+            <div class="logreg-link animation" style="--i: 4">
+              <p>Não tem uma conta? <a href="#" class="register-link">Cadastre-se</a></p>
+            </div>
+          </form>
+        </div>
+        <!--texto login-->
+        <div class="info-text login">
+          <h2 class="animation" style="--i: 0">Bem Vindo de Volta!</h2>
+          <p class="animation" style="--i: 1">É um prazer ter você aqui novamente. <br>Prepare-se para saborear momentos doces e especiais.<br> Sua próxima delícia já está te esperando!</p>
+        </div>
+      
+        
+        <!--cadastro-->
+        <div class="form-box register">
+          <h2>Criar Conta</h2>
+
+          <form action="#">
+            <div class="input-box">
+              <input type="text" required />
+              <label>Nome</label> 
+              <ion-icon name="person"></ion-icon> 
+            </div>
+
+            <div class="input-box">
+              <input type="password" required />
+              <label>Email</label> 
+              <ion-icon name="person"></ion-icon>
+            </div>
+
+            <div class="input-box">
+              <input type="password" required />
+              <label>Senha</label> 
+              <ion-icon name="lock-closed"></ion-icon>
+            </div>
+
+            <button type="submit" class="btn btn-login">Cadastrar</button>
+
+            <div class="logreg-link">
+              <p>Ja possui numa conta? <a href="#" class="login-link">Registrar</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <!--texto login-->
+        <div class="info-text register">
+        <h2>Bem Vindo de Volta!</h2>
+        <p>É um prazer ter você aqui novamente. <br>Prepare-se para saborear momentos doces e especiais.<br> Sua próxima delícia já está te esperando!</p>
+      </div>
+      </div>
+    </section>
+
+    <!--script-->
+    <script src="assets/js/script.js"></script>
+
+    <!--ionicons-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
