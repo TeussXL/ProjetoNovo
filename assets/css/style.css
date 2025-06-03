@@ -813,6 +813,7 @@ transition: background-color 0.3s, color 0.1s;
   color: var(--marrom-escuro);
   font-size: var(--fs-8);
   font-weight: var(--weight-semiBold);
+  
 }
 
 .wrapper .form-box.login {
@@ -912,12 +913,33 @@ text-align: right;
 
 .wrapper.active .form-box.login .animation {
   transform: translateX(-120%);
+  transition-delay: calc(0.1s * var(--i));
 }
 
 .wrapper .form-box.login .animation {
   transition: 0.7s ease;
   transform: translateX(0);
 }
+
+.wrapper .info-text.login .animation {
+  transform: translateX(0);
+  transition: 0.7s ease;
+}
+
+.wrapper.active .info-text.login .animation {
+  transform: translateX(120%);
+  transition-delay: calc(0.1s * var(--i));
+}
+
+
+
+
+
+
+
+
+
+
 
 /* # SOBRE */
 .container-sobre {
@@ -980,5 +1002,5 @@ text-align: right;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
-    
 /*
+

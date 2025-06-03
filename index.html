@@ -268,32 +268,32 @@
         <span class="bg-animate2"></span>
 
         <div class="form-box login">
-          <h2 class="animation">Login</h2>
+          <h2 class="animation" style="--i: 0">Login</h2>
 
           <form action="#">
-            <div class="input-box animation">
+            <div class="input-box animation" style="--i: 1">
               <input type="text" required />
               <label>Usuário</label> 
               <ion-icon name="person"></ion-icon> 
             </div>
 
-            <div class="input-box animation">
+            <div class="input-box animation" style="--i: 2">
               <input type="password" required />
               <label>Senha</label> 
               <ion-icon name="lock-closed"></ion-icon>
             </div>
 
-            <button type="submit" class="btn btn-login animation">Entrar</button>
+            <button type="submit" class="btn btn-login animation" style="--i: 3">Entrar</button>
 
-            <div class="logreg-lin animation">
-              <p>Não tem uma conta? <a href="#" class="register-link">Registrar</a></p>
+            <div class="logreg-link animation" style="--i: 4">
+              <p>Não tem uma conta? <a href="#" class="register-link">Cadastre-se</a></p>
             </div>
           </form>
         </div>
         <!--texto login-->
         <div class="info-text login">
-          <h2>Bem Vindo de Volta!</h2>
-          <p>É um prazer ter você aqui novamente. <br>Prepare-se para saborear momentos doces e especiais.<br> Sua próxima delícia já está te esperando!</p>
+          <h2 class="animation" style="--i: 0">Bem Vindo de Volta!</h2>
+          <p class="animation" style="--i: 1">É um prazer ter você aqui novamente. <br>Prepare-se para saborear momentos doces e especiais.<br> Sua próxima delícia já está te esperando!</p>
         </div>
       
         
@@ -323,7 +323,8 @@
             <button type="submit" class="btn btn-login">Cadastrar</button>
 
             <div class="logreg-link">
-              <p>Ja possui numa conta? <a href="#" class="login-link">Registrar</a></p>
+              <p>Ja possui numa conta? <a href="#" class="login-link">Registrar</a>
+              </p>
             </div>
           </form>
         </div>
