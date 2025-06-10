@@ -932,6 +932,7 @@ text-align: right;
 }
 
 
+
 /* # SOBRE */
 .container-sobre {
   max-width: 1200px;
@@ -986,6 +987,7 @@ text-align: right;
   margin-top: 50px;
   max-width: 180px;
 }
+
 /*
 .efeito {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
